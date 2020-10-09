@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Spartan', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+h1{
+    font-weight: 700;
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+h2, h3{
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    letter-spacing: 8px;
+}
+h2 a{
+    color: black;
+    opacity: 0.5;
+    text-decoration: none;
+   
+}
+p{
+    opacity: 0.5;
+    line-height: 1.5;
+    text-justify: inter-word;
+    text-align: justify;
+}
+.container{
+    width: 87.5rem;
+    margin: 0px auto 10px;
+    box-shadow: 0 0 20px 1px rgb(184, 179, 179);
+   
+}
+/*************************** header  */
+header{
+    display: flex;
+    flex-direction:row;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/**************************** left header  */
+.left-header{
+    position: relative;
+    margin: 0;
+    height: 534px;
+}
+.nav-bar-container{
+    position: absolute;
+    margin-top: 60px ;
+    margin-left: 60px;
+    display: inline-flex;
+    cursor: pointer;
+
+}
+.icon-hamburger, .icon-close{
+  display: none;
+}
+
+nav>ul{
+    display: inline-flex;
+    margin-left: 40px;
+}
+nav>ul>li{
+    list-style: none;
+    margin: 0 15px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    text-transform: lowercase;
+}
+
+/*********************************** right header  */
+.right-header{
+    width: 35rem;
+    padding: 100px 64px;
+    position: relative;
+  
+}
+.header-shop-now-button{
+    display: inline-block;
+}
+.control-header-slides{
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  display: flex;
+  cursor: pointer;
+
+}
+.control-header-slides img{
+    background-color: black;
+    padding: 25px 23px;
+}
+
+
+/*************** main: ABOUT */
+main{
+    display: flex;
+}
+.about{
+    padding: 30px 20px;
+    width: 580px;
+}
+
+/************************ footer  */
+.attribution{
+    margin-top: 30px;
+}
+
+.header-images-mobile{
+display: none;
+}
+
+@media (max-width:1440px){
+    .container{
+        width: auto;
+    }
+    header{
+        flex-direction: column;
+    }
+    .right-header{
+        width: 840px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    main{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .about{
+        order:3;
+        width: 840px;
+        padding-left: 60px;
+        padding-right: 60px;
+        
+    }
+    .image-about-light{
+        width: 420px;
+    }
+    .control-header-slides{
+        left: 720px;
+        bottom: 470px;
+      }
+    
+}
+@media screen and (max-width:860px){
+  
+
+    .header-images-mobile{
+        display: block;
+    }
+    .header-images-mobile img{
+        width: 420px;
+    }
+    .header-images-desktop{
+        display: none;
+    }
+    
+    .about, .right-header{
+        order: initial;
+        width: 420px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .right-header{
+        padding-top: 0;
+    }
+    .control-header-slides{
+        left: 300px;
+        bottom: 601px;
+    }
+    /************* naw bar  */
+    .nav-bar{
+        margin-left: 120px;
+    }
+
+   .navmenu{
+       background-color:white;
+       width: 420px;
+       position: absolute;
+       top:0;
+       height: 130px;
+       left: -800px;
+       top:-60px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       transition: all 0.2s ease;
+       
+   }
+   .navmenu-active{
+    background-color:white;
+    width: 420px;
+    position: absolute;
+    top:0;
+    height: 130px;
+    left: -180px;
+    top:-60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+   
+   }
+
+   .navmenu a{
+    color: black;
+   }
+    .icon-hamburger, .icon-close{
+        position: absolute;
+        left: -140px;
+        cursor: pointer;
+        z-index: 10000;
+        fill: salmon;
+    }
+    .icon-hamburger{
+        display: block;
+    }
+    .icon-close{
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+    .hide{
+        display: none;
+    }
+
+      }
